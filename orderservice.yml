@@ -1,7 +1,7 @@
 order:
 
   tax:
-    gstPercentage: 18
+    gst-percentage: 18
 
   shipping:
     charge: 100
