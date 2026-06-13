@@ -7,13 +7,12 @@ spring:
     url: ${CART_DB_URL}
     username: ${CART_DB_USER}
     password: ${CART_DB_PASSWORD}
-    driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
       ddl-auto: update
 
-  flyway:
-    enabled: true
-    baseline-on-migrate: true
-    locations: classpath:db/migration
+info:
+  app:
+    name: Cart Service
+    version: 1.0.0
