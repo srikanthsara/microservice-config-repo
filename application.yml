@@ -1,0 +1,13 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+
+springdoc:
+  api-docs:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
