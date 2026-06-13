@@ -1,0 +1,17 @@
+server:
+  port: 8763
+
+spring:
+
+  datasource:
+    url: ${CART_DB_URL}
+    username: ${CART_DB_USER}
+    password: ${CART_DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  flyway:
+    enabled: true
