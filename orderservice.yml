@@ -1,15 +1,40 @@
-order:
+server:
+  port: 8764
 
-  tax:
-    gst-percentage: 18
+spring:
 
-  shipping:
-    charge: 100
+  datasource:
+    url: ${ORDER_DB_URL}
+    username: ${ORDER_DB_USER}
+    password: ${ORDER_DB_PASSWORD}
 
-  discount:
-    default-discount: 200
+  jpa:
+    hibernate:
+      ddl-auto: update
 
-  status:
-    payment-pending: PENDING
-    inventory-pending: PENDING
-    order-created: ORDER_CREATED
+  flyway:
+    locations: classpath:db/migration
+
+  kafka:
+
+    bootstrap-servers: ${KAFKA_SERVERS}
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+    consumer:
+      group-id: order-group
+      auto-offset-reset: earliest
+
+      properties:
+        spring.json.trusted.packages: "*"
+
+info:
+  app:
+    name: Order Service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL}

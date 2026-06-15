@@ -1,12 +1,12 @@
 server:
-  port: 8763
+  port: 8762
 
 spring:
 
   datasource:
-    url: ${CART_DB_URL}
-    username: ${CART_DB_USER}
-    password: ${CART_DB_PASSWORD}
+    url: ${SEARCH_DB_URL}
+    username: ${SEARCH_DB_USER}
+    password: ${SEARCH_DB_PASSWORD}
 
   jpa:
     hibernate:
@@ -17,8 +17,8 @@ spring:
 
 info:
   app:
-    name: Cart Service
-    description: Production Ready Cart Service
+    name: Grocery Search Service
+    description: Production Ready Grocery Search Service
 
 eureka:
   client:

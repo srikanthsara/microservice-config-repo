@@ -1,0 +1,32 @@
+server:
+  port: 8765
+
+  servlet:
+    context-path: /paymentservice
+
+spring:
+
+  datasource:
+    url: ${PAYMENT_DB_URL}
+    username: ${PAYMENT_DB_USER}
+    password: ${PAYMENT_DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  kafka:
+
+    bootstrap-servers: ${KAFKA_SERVERS}
+
+    consumer:
+      group-id: payment-group
+
+info:
+  app:
+    name: Payment Service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL}
