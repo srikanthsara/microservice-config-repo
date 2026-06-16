@@ -5,7 +5,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5433/cart_db
     username: cart_user
-    password: cart_pass
+    password: cart_password
     driver-class-name: org.postgresql.Driver
 
   jpa:
