@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://${DB_HOST}:5432/order_db
-    username: postgres
-    password: postgres
+    url: ${ORDER_DB_URL}
+    username: ${ORDER_DB_USER}
+    password: ${ORDER_DB_PASSWORD}
 
   kafka:
     consumer:
