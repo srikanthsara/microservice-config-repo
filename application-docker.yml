@@ -1,0 +1,8 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin123@discoveryservice:8761/eureka/
+
+spring:
+  kafka:
+    bootstrap-servers: kafka:9092
