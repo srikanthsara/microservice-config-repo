@@ -2,25 +2,11 @@ server:
   port: 8762
 
 spring:
-
   datasource:
-    url: ${SEARCH_DB_URL}
-    username: ${SEARCH_DB_USER}
-    password: ${SEARCH_DB_PASSWORD}
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-
-  flyway:
-    locations: classpath:db/migration
+    url: jdbc:postgresql://${DB_HOST}:5432/search_db
+    username: postgres
+    password: postgres
 
 info:
   app:
     name: Grocery Search Service
-    description: Production Ready Grocery Search Service
-
-eureka:
-  client:
-    service-url:
-      defaultZone: ${EUREKA_URL}
