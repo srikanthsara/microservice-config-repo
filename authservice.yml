@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://${DB_HOST}:5432/auth_db
-    username: postgres
-    password: postgres
+    url: jdbc:postgresql://${DB_HOST}:5433/auth_db
+    username: auth_user
+    password: auth_pass
 
 info:
   app:
