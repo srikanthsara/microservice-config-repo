@@ -2,15 +2,34 @@ server:
   port: 8764
 
 spring:
+
   datasource:
     url: ${ORDER_DB_URL}
     username: ${ORDER_DB_USER}
     password: ${ORDER_DB_PASSWORD}
 
   kafka:
+
+    bootstrap-servers: ${KAFKA_SERVERS}
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
     consumer:
       group-id: order-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+
+      properties:
+        spring.json.trusted.packages: "*"
 
 info:
   app:
     name: Order Service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL}
