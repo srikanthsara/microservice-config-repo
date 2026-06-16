@@ -2,25 +2,15 @@ server:
   port: 8763
 
 spring:
-
   datasource:
-    url: ${CART_DB_URL}
-    username: ${CART_DB_USER}
-    password: ${CART_DB_PASSWORD}
+    url: jdbc:postgresql://${DB_HOST}:5432/cart_db
+    username: postgres
+    password: postgres
 
   jpa:
     hibernate:
       ddl-auto: update
 
-  flyway:
-    locations: classpath:db/migration
-
 info:
   app:
     name: Cart Service
-    description: Production Ready Cart Service
-
-eureka:
-  client:
-    service-url:
-      defaultZone: ${EUREKA_URL}
