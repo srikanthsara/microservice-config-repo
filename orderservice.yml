@@ -24,6 +24,7 @@ spring:
 
       properties:
         spring.json.trusted.packages: "*"
+        spring.json.value.default.type: com.common.event.OrderCreatedEvent
 
 info:
   app:
