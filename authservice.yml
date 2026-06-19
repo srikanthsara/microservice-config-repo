@@ -10,3 +10,8 @@ spring:
 info:
   app:
     name: Auth Service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL}

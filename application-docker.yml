@@ -1,7 +1,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://admin:admin123@discoveryservice:8761/eureka/
+      defaultZone: ${EUREKA_URL}
 
 spring:
   kafka:
