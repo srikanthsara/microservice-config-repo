@@ -4,9 +4,9 @@ server:
 spring:
 
   datasource:
-    url: ${PAYMENT_DB_URL}
-    username: ${PAYMENT_DB_USER}
-    password: ${PAYMENT_DB_PASSWORD}
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
 
   kafka:
 

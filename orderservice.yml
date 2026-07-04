@@ -4,9 +4,9 @@ server:
 spring:
 
   datasource:
-    url: ${ORDER_DB_URL}
-    username: ${ORDER_DB_USER}
-    password: ${ORDER_DB_PASSWORD}
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
 
   kafka:
 

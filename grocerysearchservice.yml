@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: ${SEARCH_DB_URL}
-    username: ${SEARCH_DB_USER}
-    password: ${SEARCH_DB_PASSWORD}
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
 
 info:
   app:
