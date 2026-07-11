@@ -1,8 +1,12 @@
+
 eureka:
   client:
     service-url:
       defaultZone: ${EUREKA_URL}
 
 spring:
+  profiles:
+    active: local
+
   kafka:
     bootstrap-servers: localhost:9092
