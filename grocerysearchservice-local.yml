@@ -4,8 +4,3 @@ spring:
     url: jdbc:postgresql://localhost:5433/search_db
     username: search_user
     password: search_password
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://admin:admin123@localhost:8761/eureka/

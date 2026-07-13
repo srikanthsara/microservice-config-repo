@@ -34,8 +34,3 @@ spring:
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG
-
-eureka:
-  client:
-    service-url:
-      defaultZone: ${EUREKA_URL}
