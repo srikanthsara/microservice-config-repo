@@ -7,3 +7,4 @@ spring:
     url: jdbc:postgresql://localhost:5433/order_db
     username: order_user
     password: order_password
+    driver-class-name: org.postgresql.Driver

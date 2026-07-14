@@ -7,3 +7,4 @@ spring:
     url: jdbc:postgresql://localhost:5433/search_db
     username: search_user
     password: search_password
+    driver-class-name: org.postgresql.Driver
