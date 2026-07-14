@@ -1,3 +1,6 @@
+server:
+  port: 8764
+
 spring:
 
   datasource:
